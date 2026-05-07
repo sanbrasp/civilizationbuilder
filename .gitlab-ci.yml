@@ -1,0 +1,19 @@
+stages:
+  - security
+
+gitleaks:
+  stage: security
+  image:
+    name: zricethezav/gitleaks:latest
+    entrypoint: [""]
+  script:
+    - gitleaks detect --source . --verbose
+
+
+semgrep:
+  stage: security
+  image: 
+    name: semgrep/semgrep:latest
+    entrypoint: [""]
+  script: 
+    - semgrep scan --config=auto . 
