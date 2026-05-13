@@ -1,4 +1,5 @@
-﻿using CivilizationBuilder.Models;
+﻿using System.Collections.Generic;
+using CivilizationBuilder.Models;
 using CivilizationBuilder.Services;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,17 +8,15 @@ namespace CivilizationBuilder.Controllers
 {
     public class GameController : MonoBehaviour
     {
-        // ==================
-        // SERVICES
-        // ==================
         private GeneticsService _geneticsService;
         private PopulationService _populationService;
         private TimeService _timeService;
         private SaveService _saveService;
         
-        // ==================
-        // UNITY LIFECYCLE
-        // ==================
+        [SerializeField] private GameObject _personPrefab;
+
+        private readonly Dictionary<string, PersonView> _personViews = new Dictionary<string, PersonView>();
+        
         private void Awake()
         {
             InitializeServices();
@@ -123,12 +122,41 @@ namespace CivilizationBuilder.Controllers
         // ==================
         private void OnPersonBorn(Person person)
         {
+            SpawnPerson(person);
             Debug.Log($"[Event] {person.Name} was born.");
         }
 
         private void OnPersonDied(Person person)
         {
+            DespawnPerson(person);
             Debug.Log($"[Event] {person.Name} has died at age {person.Age}.");
+        }
+
+        private void SpawnPerson(Person person)
+        {
+            if (_personPrefab == null)
+            {
+                Debug.LogWarning("Person prefab not assigned!");
+                return;
+            }
+
+            Vector3 position = new Vector3(
+                Random.Range(-10f, 10f),
+                0f,
+                Random.Range(-10f, 10f)
+            );
+
+            GameObject go = Instantiate(_personPrefab, position, Quaternion.identity);
+            PersonView view = go.GetComponent<PersonView>();
+            view.Initialize(person);
+            _personViews[person.Id] = view;
+        }
+
+        private void DespawnPerson(Person person)
+        {
+            if (!_personViews.TryGetValue(person.Id, out PersonView view)) return;
+            _personViews.Remove(person.Id);
+            Destroy(view.gameObject);
         }
     }
 }
