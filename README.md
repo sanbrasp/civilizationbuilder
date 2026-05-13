@@ -63,10 +63,10 @@ and inbreeding causes recessive traits to surface.
 - [x] Game controller
 
 ### 🔧 Phase 2 — Visuals (Current)
-- [ ] Person prefab and view
+- [x] Person prefab and view
 - [ ] Building prefabs (house, farm, market)
 - [ ] Tree and environment decoration
-- [ ] Isometric camera setup
+- [x] Isometric camera setup
 - [ ] Basic HUD (year, population count)
 
 ### 📋 Phase 3 — Gameplay
