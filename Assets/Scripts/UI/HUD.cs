@@ -40,5 +40,11 @@ namespace CivilizationBuilder.UI
 
         private void UpdatePopulation() =>
             _populationText.text = $"Population: {_populationService.AllPeople.Count}";
+
+        public void RefreshAll()
+        {
+            UpdateYear(_timeService.CurrentYear);
+            UpdatePopulation();
+        }
     }
 }
