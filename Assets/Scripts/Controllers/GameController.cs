@@ -117,6 +117,7 @@ namespace CivilizationBuilder.Controllers
                 _populationService.AddPerson(person);
                 SpawnPerson(person);
             }
+            _hud.RefreshAll();
             Debug.Log($"Starting population seeded with {_populationService.AllPeople.Count} people.");
         }
         
