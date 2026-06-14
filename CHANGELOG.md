@@ -8,17 +8,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### Planned
-- Person prefab and view
 - Building prefabs (house, farm, market)
 - Tree and environment decoration
-- Isometric camera setup
-- Basic HUD (year, population count)
+- Settlement founding and placement
+- Resource system
+- Player input and selection
 
 ---
 
-## [Unreleased]
-### Known Issues
-- Founding population (10 people) not visually spawned on game start
+## [0.2.0] - 2025-06-14
+### Added
+- Isometric camera setup
+- PersonPrefab with PersonView component and spawn/despawn logic
+- House and Tree placeholder prefabs with materials
+- Founding population (10 people) spawned visually at game start
+- HUD with real-time year and population counter
+
+### Fixed
+- Founding population not visually spawned on game start
+- Population counter showing 0 until first birth
 
 ---
 
