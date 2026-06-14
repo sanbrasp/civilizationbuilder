@@ -111,6 +111,7 @@ namespace CivilizationBuilder.Controllers
 
                 Person person = new Person($"{name} {i + 1}", sex, gender, genome);
                 _populationService.AddPerson(person);
+                SpawnPerson(person);
             }
             Debug.Log($"Starting population seeded with {_populationService.AllPeople.Count} people.");
         }
