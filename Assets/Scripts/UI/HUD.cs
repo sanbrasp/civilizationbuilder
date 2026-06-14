@@ -74,7 +74,7 @@ namespace CivilizationBuilder.UI
         private void UpdateBirthsDeaths()
         {
             _birthsValue.text = $"+{_birthsThisYear}";
-            _deathsValue.text = _deathsThisYear.ToString();
+            _deathsValue.text = $"-{_deathsThisYear}";
         }
 
         private string GetSettlementTier()
