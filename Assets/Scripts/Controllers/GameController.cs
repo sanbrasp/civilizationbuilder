@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CivilizationBuilder.Models;
 using CivilizationBuilder.Services;
+using CivilizationBuilder.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,8 @@ namespace CivilizationBuilder.Controllers
         private SaveService _saveService;
         
         [SerializeField] private GameObject _personPrefab;
+
+        [SerializeField] private HUD _hud;
 
         private readonly Dictionary<string, PersonView> _personViews = new Dictionary<string, PersonView>();
         
@@ -97,6 +100,7 @@ namespace CivilizationBuilder.Controllers
             _populationService.Initialize();
             _timeService.Initialize();
             _saveService.Initialize();
+            _hud.Initialize(_timeService, _populationService);
         }
 
         private void SeedStartingPopulation()
