@@ -8,8 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### Planned
-- Building prefabs (house, farm, market)
-- Tree and environment decoration
+- Fix spawn area — people spawning too close together
+- Clamp spawn positions to avoid HUD area
+- Cell divider borders on HUD
+- Fix births/deaths counter (resets but not counting correctly)
+- Limit breeding rate to avoid population explosion
+- Building prefabs placed in world
 - Settlement founding and placement
 - Resource system
 - Player input and selection
