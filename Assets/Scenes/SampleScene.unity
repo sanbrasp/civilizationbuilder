@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 129931606}
   - component: {fileID: 129931605}
   m_Layer: 5
-  m_Name: ValueText
+  m_Name: ValueTextPop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,12 +349,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 12
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 141553836}
   - component: {fileID: 141553835}
   m_Layer: 5
-  m_Name: ValueText
+  m_Name: ValueTextSettlement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -854,12 +854,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 12
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 548309849}
   - component: {fileID: 548309848}
   m_Layer: 5
-  m_Name: ValueText
+  m_Name: ValueTextBirth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 653816156}
   - component: {fileID: 653816155}
   m_Layer: 5
-  m_Name: LabelText
+  m_Name: LabelTextDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,8 +1254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38964aa4d70346f89d1c03eab3168a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CivilizationBuilder.UI.HUD
-  _yearText: {fileID: 0}
-  _populationText: {fileID: 0}
+  _yearValue: {fileID: 1166981879}
+  _populationValue: {fileID: 129931605}
+  _settlementValue: {fileID: 141553835}
+  _birthsValue: {fileID: 548309848}
+  _deathsValue: {fileID: 1780810475}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,7 +1320,7 @@ GameObject:
   - component: {fileID: 906614553}
   - component: {fileID: 906614552}
   m_Layer: 5
-  m_Name: LabelText
+  m_Name: LabelTextYear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,9 +1481,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: 0}
-  m_SizeDelta: {x: 1, y: 80}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &973068671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,7 +1609,7 @@ GameObject:
   - component: {fileID: 1166981880}
   - component: {fileID: 1166981879}
   m_Layer: 5
-  m_Name: ValueText
+  m_Name: ValueTextYear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,12 +1827,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 12
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -1974,12 +1977,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 12
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -2078,12 +2081,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 12
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -2101,7 +2104,7 @@ GameObject:
   - component: {fileID: 1557085900}
   - component: {fileID: 1557085899}
   m_Layer: 5
-  m_Name: LabelCell
+  m_Name: LabelTextSettlement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2238,7 +2241,7 @@ GameObject:
   - component: {fileID: 1650391011}
   - component: {fileID: 1650391010}
   m_Layer: 5
-  m_Name: LabelText
+  m_Name: LabelTextBirth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2454,7 +2457,7 @@ GameObject:
   - component: {fileID: 1780810476}
   - component: {fileID: 1780810475}
   m_Layer: 5
-  m_Name: ValueText
+  m_Name: ValueTextDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2591,7 +2594,7 @@ GameObject:
   - component: {fileID: 1881394104}
   - component: {fileID: 1881394103}
   m_Layer: 5
-  m_Name: LabelText
+  m_Name: LabelTextPop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2755,7 +2758,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1160, y: 20}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910461176
 MonoBehaviour:
